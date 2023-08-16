@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="text-4xl font-bold text-center my-8">First Confirm yourself</h1>
+    <p class="text-center mb-3 font-medium text-lg">
+      Email: lehri@gmail.com <br />
+      Pass: 123
+    </p>
+    <div class="bg-green-700 p-5 w-1/2 mx-auto rounded-lg">
+      <input
+        type="email"
+        placeholder="type your email"
+        id="email"
+        class="block mb-3 px-2 py-1 w-full"
+      />
+      <input
+        type="password"
+        placeholder="type password here"
+        id="pass"
+        class="block mb-3 px-2 py-1 w-full"
+      />
+      <button
+        id="login-btn"
+        class="bg-violet-700 text-white px-2 py-1 rounded-lg"
+      >
+        Submit
+      </button>
+    </div>
+    <script>
+      document
+        .getElementById("login-btn")
+        .addEventListener("click", function () {
+          const email = document.getElementById("email").value;
+          const pass = document.getElementById("pass").value;
+          if (email === "lehri@gmail.com" && pass === "123") {
+            window.location.href = "index.html";
+          } else {
+            alert("Incorrect");
+          }
+        });
+    </script>
+  </body>
+</html>
